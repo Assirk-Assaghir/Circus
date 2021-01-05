@@ -33,7 +33,8 @@ const AppBarCollapse = props => {
 
     const NavItems =
         [
-            { title: "Gallery", path: "/Gallery" },
+
+            { title: "Gallery", path: "/gallery" },
             { title: "Programs", path: "/Programs" },
             { title: "AboutUs", path: "/AboutUs" },
             { title: "ContuctUs", path: "/ContuctUs" },

@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'AboutUs',
     'event',
     'gallary'
-]
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',

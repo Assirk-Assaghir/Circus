@@ -5,7 +5,7 @@ import Gallery from './Components/gallery/gallery.jsx'
 import './App.css';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
-
+import GalleryItem from "./Components/gallery/galleryItem.jsx"
 
 const App = () => {
   return (
@@ -14,6 +14,7 @@ const App = () => {
       <Switch>
         <Route exact path='/' render={(props) => <HomePage {...props} />} />
         <Route exact path='/gallery' render={(props) => <Gallery {...props} />} />
+        <Route exact path='/gallery/:id' render={(props) => <GalleryItem {...props} />} />
       </Switch>
       <Footer />
     </div>

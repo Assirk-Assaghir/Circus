@@ -5,7 +5,7 @@ import Pagination from './Pagination'
 const Events = () => {
     const [events, setEvents] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
-    const [eventsPerPage] = useState(2)
+    const [eventsPerPage] = useState(3)
 
     console.log(events)
     useEffect(() => {

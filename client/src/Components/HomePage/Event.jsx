@@ -7,8 +7,8 @@ const Event = ({ event }) => {
             <div className="meta">
                 <div className="photo" style={{ backgroundImage: `url(${event.image})` }} ></div>
                 <ul className="details">
-                    <li className="author">John Doe</li>
-                    <li className="date">Aug. 24, 2015</li>
+                    <li className="author">{event.author}</li>
+                    <li className="date">{event.date}</li>
                 </ul>
             </div>
             <div className="description">

@@ -1,23 +1,21 @@
 import React from 'react'
-import './App.css';
-import Gallery from './Components/gallery/gallery.jsx'
 import { Switch, Route } from 'react-router-dom';
 
+import HomePage from './Components/HomePage/HomePage'
+import Gallery from './Components/gallery/gallery.jsx'
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
+import './App.css';
 
-  }
-  render() {
-    return (
-      <div className='App'>
+
+const App = () => {
+  return (
+    <div className='App'>
         <Switch>
+          <Route exact path='/' render={(props) => <HomePage {...props} />} />
           <Route exact path='/gallery' render={(props) => <Gallery {...props} />} />
         </Switch>
       </div>
-    )
-  }
+  );
 }
 
 

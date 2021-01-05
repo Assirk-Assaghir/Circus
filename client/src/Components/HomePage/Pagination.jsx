@@ -8,17 +8,13 @@ const Pagination = ({ eventsPerPage, totalEvents, paginate }) => {
     }
 
     return (
-        <nav>
-            <ul className='pagination'>
-                {pageNumbers.map(number => (
-                    <li key={number} className='page-item'>
-                        <p onClick={() => paginate(number)} >
-                            {number}
-                        </p>
-                    </li>
-                ))}
-            </ul>
-        </nav>
+        <div className='pagination'>
+            {pageNumbers.map(number => (
+                <p className='number' onClick={() => paginate(number)} >
+                    {number}
+                </p>
+            ))}
+        </div>
     );
 };
 

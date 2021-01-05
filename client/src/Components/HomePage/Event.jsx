@@ -1,17 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Event = ({ event }) => {
-    // const image = 'https://www.albayan.ae/polopoly_fs/1.3715043.1575134650!/image/image.jpg'
-
     return (
-        <div className='event'>
-            <div className='event__img' style={{ backgroundImage: `url(${event.image})` }}>
-
+        <div className="blog-card">
+            <div className="meta">
+                <div className="photo" style={{ backgroundImage: `url(${event.image})` }} ></div>
+                <ul className="details">
+                    <li className="author">John Doe</li>
+                    <li className="date">Aug. 24, 2015</li>
+                </ul>
             </div>
-            {/* <img src='https://www.albayan.ae/polopoly_fs/1.3715043.1575134650!/image/image.jpg' alt='logo' /> */}
-            <div className='event__content'>
-                <h3 className='event__title' > {event.title}</h3>
-                <p className='event__desc' > {event.desc} </p>
+            <div className="description">
+                <h1>{event.title}</h1>
+                {/* <h2>Opening a door to the future</h2> */}
+                <p className='event__desc'> {event.desc}</p>
+                <p className="read-more">
+                    <Link >Read More</Link>
+                </p>
             </div>
         </div>
     )

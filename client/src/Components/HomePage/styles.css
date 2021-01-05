@@ -35,3 +35,15 @@
     -webkit-line-clamp: 3; /* number of lines to show */
     -webkit-box-orient: vertical;
 }
+
+.pagination{
+    display: flex;
+}
+
+.number{
+    padding: 5px;
+    margin-left: 5px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    cursor: pointer;
+}

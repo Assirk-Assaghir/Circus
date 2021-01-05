@@ -1,29 +1,27 @@
 import React from 'react'
-import './App.css';
-import Gallery from './Components/gallery/gallery.jsx'
-import AboutUs from './Components/AboutUs/AboutUs.jsx'
 import { Switch, Route } from 'react-router-dom';
+import HomePage from './Components/HomePage/HomePage'
+import Gallery from './Components/gallery/gallery.jsx'
+import './App.css';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+import AboutUs from './Components/AboutUs/AboutUs.jsx'
+import GalleryItem from "./Components/gallery/galleryItem.jsx"
 
-
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-
-  }
-  render() {
-    return (
-      <div className='App'>
-        <Switch>
-          <Route exact path='/gallery' render={(props) => <Gallery {...props} />} />
-          <Route exact path='/AboutUs' render={(props) => <AboutUs {...props} />} />
-        </Switch>
-      </div>
-    )
-  }
+const App = () => {
+  return (
+    <div className='App'>
+      <Header />
+      <Switch>
+        <Route exact path='/' render={(props) => <HomePage {...props} />} />
+        <Route exact path='/gallery' render={(props) => <Gallery {...props} />} />
+        <Route exact path='/gallery/:id' render={(props) => <GalleryItem {...props} />} />
+        <Route exact path='/AboutUs' render={(props) => <AboutUs {...props} />} />
+      </Switch>
+      <Footer />
+    </div>
+  );
 }
-
-
-
 
 export default App;
 

@@ -29,13 +29,13 @@ function ButtonAppBar(props) {
     return (
         <AppBar position="fixed" color='primary' className={classes.navigation}>
             <Toolbar>
-                <IconButton
+                {/* <IconButton
                     color="inherit"
                     aria-label="Menu"
                     className={classes.toggleDrawer}
                 >
-                    {/* <MenuIcon /> */}
-                </IconButton>
+                    <MenuIcon />
+                </IconButton> */}
                 <Typography
                     variant="title"
                     color="inherit"

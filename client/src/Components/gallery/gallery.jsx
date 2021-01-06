@@ -1,6 +1,6 @@
 import React from "react"
 import "./gallery.css"
-
+import {Link } from "react-router-dom"
 
 const results = [
     {
@@ -36,11 +36,14 @@ const Gallery = () => {
             {
                 results.map((result, i) => {
                     return (
+                        
                         <div class="card" key={i} style={{ backgroundImage: `url(${result.image})` }}>
                             <div class="content">
                                 <h2 class="title">{result.title}</h2>
                                 <p class="description">{result.description}</p>
+                                <Link to={`gallery/${result.title}`}>
                                 <button class="btn">View Trips</button>
+                                </Link>
                             </div>
                         </div>
                     )

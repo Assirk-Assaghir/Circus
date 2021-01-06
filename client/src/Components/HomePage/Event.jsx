@@ -16,7 +16,7 @@ const Event = ({ event }) => {
                 {/* <h2>Opening a door to the future</h2> */}
                 <p className='event__desc'> {event.desc}</p>
                 <p className="read-more">
-                    <Link >Read More</Link>
+                    <Link to={`event/${event.id}`}>Read More</Link>
                 </p>
             </div>
         </div>

@@ -11,7 +11,7 @@ const styles = theme => ({
     },
     link: {
         textDecoration: 'none',
-        color: 'black'
+        color: 'white'
     },
     buttonBar: {
         [theme.breakpoints.down("xs")]: {
@@ -36,8 +36,8 @@ const AppBarCollapse = props => {
 
             { title: "Gallery", path: "/gallery" },
             { title: "Programs", path: "/Programs" },
-            { title: "AboutUs", path: "/AboutUs" },
-            { title: "ContuctUs", path: "/ContuctUs" },
+            { title: "About Us", path: "/AboutUs" },
+            { title: "Contact Us", path: "/ContactUs" },
         ]
     return (
         <div className={props.classes.root}>

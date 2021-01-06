@@ -32,6 +32,7 @@ const AboutUs = () => {
                         </div>
                         <div className={i % 2 !== 0 ? "left" : "right"}>
                             <img alt={abt.alt} src={abt.img} />
+                            <small>{abt.alt}</small>
                         </div>
                         <div className="clear"></div>
                     </div>

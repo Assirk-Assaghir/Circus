@@ -5,6 +5,8 @@
 
 .container {
     width: 95%;
+    padding: 0% 2.5%;
+    background-color: #fff;
 }
 
 .container h1 {
@@ -12,10 +14,9 @@
 }
 
 .about {
-    padding: 5% 0;
+    padding: 1% 0;
     width: 100%;
     height: auto;
-    background-color: #fff;
 }
 
 .about .left {
@@ -31,7 +32,8 @@
 }
 
 .about .right img {
-    width: 100%
+    width: 100%;
+    border-radius: 15px;
 }
 
 .about .left h1 {
@@ -60,6 +62,7 @@
 
 .about .left img {
     width: 100%;
+    border-radius: 15px;
 }
 
 .about .right h1 {

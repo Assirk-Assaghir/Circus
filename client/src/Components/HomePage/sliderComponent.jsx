@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import "./styles.css";
+import "./style.css";
 
 export default function SliderComponent() {
     const [imgs, setImgs] = useState([])
@@ -20,7 +20,7 @@ export default function SliderComponent() {
 
     return (
         <div>
-            <h1>Carousel in React</h1>
+            {/* <h1>Carousel in React</h1> */}
             <Carousel
                 showThumbs={false}
                 showStatus={false}
@@ -28,14 +28,14 @@ export default function SliderComponent() {
                 // emulateTouch
                 autoPlay
                 useKeyboardArrows
-                transitionTime={1000}
+                // transitionTime={3000}
                 // axis="vertical"
                 // selectedItem={1}
-                width="500px"
+                width="600px"
             >
                 {imgs.map((img, i) => (
                     <div className="slide-holder" >
-                        <img height="400px"
+                        <img
                             alt={i}
                             src={img.imgURL}
                             key={i}

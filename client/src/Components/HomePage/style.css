@@ -24,9 +24,9 @@ body {
 
 .carousel .slide img {
     margin: 30px;
-    width: 35%;
-    height: 200px;
-    object-fit: contain;
+    width: 75%;
+    height: 350px;
+    object-fit: inherit;
 }
 
 .carousel .slide iframe {

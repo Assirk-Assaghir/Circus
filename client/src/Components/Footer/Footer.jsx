@@ -1,64 +1,62 @@
 import React from 'react'
-
-
+import { Link } from "react-router-dom";
+import FacebookIcon from '@material-ui/icons/Facebook';
+import EditLocationIcon from '@material-ui/icons/EditLocation';
+import TwitterIcon from '@material-ui/icons/Twitter';
 import './styles.css'
 
 
 const Footer = () => {
     return (
-        //         <footer className="site-footer">
-        //             <div className="container">
-        //                 <div className="row">
-        //                     <div className="col-sm-12 col-md-6">
-        //                         <h6>About</h6>
-        //                         <p className="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
-        //                     </div>
+        <footer class="footer">
+            <div className="footer-left col-md-4 col-sm-6">
+                <p className="about">
+                    <span> About the company</span> The Nablus Performing Art School (Assirk Assaghir Association)
+                has created a psychosocial treatment program for children through play in the year 2018.
+                This is a community program that seeks to work with children in different marginalized
+                areas and improve their psychological state through play, especially circus and theater games.
+                The program focuses on working with children who are being harassed by the occupation and its settlers in the
+                regions classified as "Area C". The program is led by a group of psychologists.
+                The program has provided services to 1,500 children in Palestinian villages and camps.
+                </p>
 
-        //                     <div className="col-xs-6 col-md-3">
-        //                         <h6>Categories</h6>
-        //                         <ul className="footer-links">
-        //                             <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-        //                             <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-        //                             <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-        //                             <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-        //                             <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-        //                             <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
-        //                         </ul>
-        //                     </div>
+            </div>
+            <div className="footer-center col-md-4 col-sm-6">
+                <div>
+                    <p><span>  Shwetra Street</span>  Nablus, Palestine</p>
+                </div>
+                <div>
+                    <p><span> 09-2330877 </span> </p>
+                </div>
+                <div>
+                    <p><a href="#"> Mh.shafee@yahoo.com</a></p>
+                </div>
+                <div className="icons">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <FacebookIcon className="ICONS" />
+                    </a>
+                    <Link to="">
+                        <TwitterIcon className="ICONS" />
+                    </Link>
+                    <Link to="">
+                        <EditLocationIcon className="ICONS" />
+                    </Link>
+                    {/* <a href="#"><i className="fa fa-twitter"></i></a>
+                    <a href="#"><i className="fa fa-linkedin"></i></a>
+                    <a href="#"><i className="fa fa-google-plus"></i></a>
+                    <a href="#"><i className="fa fa-instagram"></i></a> */}
+                </div>
 
-        //                     <div className="col-xs-6 col-md-3">
-        //                         <h6>Quick Links</h6>
-        //                         <ul className="footer-links">
-        //                             <li><a href="http://scanfcode.com/about/">About Us</a></li>
-        //                             <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-        //                             <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-        //                             <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-        //                             <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-        //                         </ul>
-        //                     </div>
-        //                 </div>
-        //                 <hr />
-        //             </div>
-        //             <div className="container">
-        //                 <div className="row">
-        //                     <div className="col-md-8 col-sm-6 col-xs-12">
-        //                         <p className="copyright-text">Copyright &copy; 2017 All Rights Reserved by
-        //          <a href="#">Scanfcode</a>.
-        //             </p>
-        //                     </div>
 
-        //                     <div className="col-md-4 col-sm-6 col-xs-12">
-        //                         <ul className="social-icons">
-        //                             <li><a className="facebook" href="#"><i className="fa fa-facebook"></i></a></li>
-        //                             <li><a className="twitter" href="#"><i className="fa fa-twitter"></i></a></li>
-        //                             <li><a className="dribbble" href="#"><i className="fa fa-dribbble"></i></a></li>
-        //                             <li><a className="linkedin" href="#"><i className="fa fa-linkedin"></i></a></li>
-        //                         </ul>
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //         </footer>
-        <div></div>
+            </div>
+            <div className="footer-right col-md-4 col-sm-6">
+
+                <img src="https://media.discordapp.net/attachments/762737273590382623/796023171756982282/132539068_216880010020608_5049590644480024286_n1.png?width=662&height=676" height="150px" maxWidth="200px" />
+
+                <p className="name"> NABLUS PERFORMING ART SCHOOL
+ &copy 2021</p>
+            </div>
+        </footer>
     )
 }
 export default Footer

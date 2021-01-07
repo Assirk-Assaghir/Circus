@@ -40,10 +40,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'import_export',
     'AboutUs',
     'event',
+<<<<<<< HEAD
     'images'
+=======
+    'gallary',
+>>>>>>> 6fdc5474c4b2b9fe49dc8eedbfe15f46df0ccdae
 ]
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',

@@ -9,6 +9,7 @@ const HomePage = () => {
         <div className='home'>
             <SliderImg />
             <Events />
+
         </div>
     )
 }

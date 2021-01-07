@@ -6,4 +6,4 @@ class AboutUsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = AboutUs
-        fields = ("title", "description", "img")
+        fields = ("title", "description", "img", "alt")

@@ -32,9 +32,9 @@ const Footer = () => {
                     <p><a href="#"> Mh.shafee@yahoo.com</a></p>
                 </div>
                 <div className="icons">
-                    <Link to="">
+                    <a href="https://www.facebook.com" target="_blank">
                         <FacebookIcon className="ICONS" />
-                    </Link>
+                    </a>
                     <Link to="">
                         <TwitterIcon className="ICONS" />
                     </Link>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import SliderComponent from './sliderComponent'
 
 export default function SliderImg() {
     const [imgs, setImgs] = useState([])
@@ -16,9 +17,10 @@ export default function SliderImg() {
     console.log('a', imgs)
     return (
         <div>
-            { imgs.map((img, i) => (
+            <SliderComponent />
+            {/* { imgs.map((img, i) => (
                 <img src={img.imgURL} key={i} />
-            ))}
+            ))} */}
         </div>
     )
 }

@@ -31,7 +31,7 @@ export default function SliderComponent() {
                 // transitionTime={3000}
                 // axis="vertical"
                 // selectedItem={1}
-                width="600px"
+                width="75%"
             >
                 {imgs.map((img, i) => (
                     <div className="slide-holder" >

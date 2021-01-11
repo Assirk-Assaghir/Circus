@@ -1,8 +1,8 @@
-body {
+/* body {
     font-family: Roboto;
     background: grey;
     text-align: center;
-}
+} */
 
 .carousel.carousel-slider {
     margin: 0px auto;
@@ -23,15 +23,15 @@ body {
 }
 
 .carousel .slide img {
-    margin: 30px;
-    width: 75%;
-    height: 350px;
+    /* margin: 30px; */
+    width: 100%;
+    max-height: 400px;
     object-fit: inherit;
 }
 
 .carousel .slide iframe {
     margin: 30px;
-    width: 35%;
+    width: 70%;
 }
 
 .carousel .text-container {

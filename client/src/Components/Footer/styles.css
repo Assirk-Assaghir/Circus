@@ -157,6 +157,7 @@
     .footer .footer-left, .footer .footer-center, .footer .footer-right {
         display: block;
         width: 100%;
+        margin-left: 0;
         margin-bottom: 40px;
         text-align: center;
     }

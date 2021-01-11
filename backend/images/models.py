@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Images(models.Model):
-    imgURL = models.TextField(max_length=600)
+    imgURL = models.CharField(max_length=750)
 
     def __str__(self):
         return self.imgURL

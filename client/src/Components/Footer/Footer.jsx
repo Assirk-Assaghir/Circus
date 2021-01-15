@@ -32,15 +32,15 @@ const Footer = () => {
                     <p><a href="#"> Mh.shafee@yahoo.com</a></p>
                 </div>
                 <div className="icons">
-                    <a href="https://www.facebook.com" target="_blank">
+                    <a href="https://www.facebook.com/Nablus.Circus.School/" target="_blank" rel="noreferrer" >
                         <FacebookIcon className="ICONS" />
                     </a>
-                    <Link to="">
+                    <a href="https://twitter.com/NablusCircus" target="_blank" rel="noreferrer" >
                         <TwitterIcon className="ICONS" />
-                    </Link>
-                    <Link to="">
+                    </a>
+                    <a href="https://www.google.com/maps/dir//32.2232843,35.2546059/@32.223299,35.2544316,19z" target="_blank" rel="noreferrer" >
                         <EditLocationIcon className="ICONS" />
-                    </Link>
+                    </a>
                     {/* <a href="#"><i className="fa fa-twitter"></i></a>
                     <a href="#"><i className="fa fa-linkedin"></i></a>
                     <a href="#"><i className="fa fa-google-plus"></i></a>
@@ -51,10 +51,9 @@ const Footer = () => {
             </div>
             <div className="footer-right col-md-4 col-sm-6">
 
-                <img src="https://media.discordapp.net/attachments/762737273590382623/796023171756982282/132539068_216880010020608_5049590644480024286_n1.png?width=662&height=676" height="150px" maxWidth="200px" />
+                <img alt="Logo" src="https://cdn.discordapp.com/attachments/762737273590382623/798268702746476554/8afa6b538377df54.png" height="150px" max-width="200px" />
 
-                <p className="name"> NABLUS PERFORMING ART SCHOOL
- &copy 2021</p>
+                <p className="name"> NABLUS PERFORMING ART SCHOOL © 2021</p>
             </div>
         </footer>
     )

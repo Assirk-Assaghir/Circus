@@ -8,7 +8,7 @@ import './styles.css'
 
 const Footer = () => {
     return (
-        <footer class="footer">
+        <footer className="footer">
             <div className="footer-left col-md-4 col-sm-6">
                 <p className="about">
                     <span> About the company</span> The Nablus Performing Art School (Assirk Assaghir Association)

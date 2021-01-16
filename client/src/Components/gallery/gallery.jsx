@@ -1,6 +1,6 @@
 import React from "react"
 import "./gallery.css"
-import {Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const results = [
     {
@@ -32,17 +32,16 @@ const results = [
 const Gallery = () => {
 
     return (
-        <main class="page-content">
+        <main className="page-content">
             {
                 results.map((result, i) => {
                     return (
-                        
-                        <div class="card" key={i} style={{ backgroundImage: `url(${result.image})` }}>
-                            <div class="content">
-                                <h2 class="title">{result.title}</h2>
-                                <p class="description">{result.description}</p>
+                        <div className="card" key={i} style={{ backgroundImage: `url(${result.image})` }}>
+                            <div className="content">
+                                <h2 className="title">{result.title}</h2>
+                                <p className="description">{result.description}</p>
                                 <Link to={`gallery/${result.title}`}>
-                                <button class="btn">View Trips</button>
+                                    <button className="btn">View Trips</button>
                                 </Link>
                             </div>
                         </div>

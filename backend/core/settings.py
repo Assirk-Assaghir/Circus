@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'import_export',
     'AboutUs',
     'event',
-    'images',
+    'carouselImage',
     'gallary',
 ]
 

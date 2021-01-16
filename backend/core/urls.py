@@ -20,6 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('gallery/', include('gallary.urls')),
     path('events/', include('event.urls')),
-    path('images/', include('images.urls')),
+    path("carouselImage/", include("carouselImage.urls")),
     path("aboutUs/", include("AboutUs.urls")),
 ]

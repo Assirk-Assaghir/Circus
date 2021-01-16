@@ -12,7 +12,7 @@ export default function SliderComponent() {
 
 
     const getImg = () => {
-        fetch('http://127.0.0.1:8000/images/')
+        fetch('http://127.0.0.1:8000/carouselImage/')
             .then(response => response.json())
             .then(events => setImgs(events))
     }

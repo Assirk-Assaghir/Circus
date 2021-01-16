@@ -1,6 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
-import { Menu } from "@material-ui/core";
+import { Menu, MenuItem } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from '@material-ui/icons/Menu';
 
@@ -11,7 +12,11 @@ const styles = theme => ({
         },
         margin: "10px",
         boxShadow: "none"
-    }
+    },
+    link: {
+        textDecoration: 'none',
+        color: '#aa1d23',
+    },
 });
 
 class ButtonAppBarCollapse extends React.Component {
@@ -29,7 +34,7 @@ class ButtonAppBarCollapse extends React.Component {
         this.setState({ anchorEl: null });
     };
     render() {
-        const { classes } = this.props;
+        const { classes, NavItems } = this.props;
         const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
 
@@ -52,7 +57,13 @@ class ButtonAppBarCollapse extends React.Component {
                     open={open}
                     onClose={this.handleClose}
                 >
-                    {this.props.children}
+                    {NavItems.map((item, i) => (
+                        <Link to={item.path} key={item.title} className={classes.link}>
+                            <MenuItem onClick={this.handleClose} >
+                                {item.title}
+                            </MenuItem>
+                        </Link>
+                    ))}
                 </Menu>
             </div>
         );

@@ -19,6 +19,16 @@ const styles = {
         marginLeft: -12,
         marginRight: 20
     },
+    logo: {
+        display: 'flex',
+        textDecoration: 'none',
+        alignItems: 'center'
+    },
+    logoText: {
+        color: '#aa1d23',
+        fontFamily: 'Gabriola',
+        margin: '1rem'
+    },
     navigation: {},
     toggleDrawer: {},
     appTitle: {}
@@ -41,8 +51,9 @@ function ButtonAppBar(props) {
                     color="inherit"
                     className={classes.appTitle}
                 >
-                    <Link to='/'>
-                        <img src="https://media.discordapp.net/attachments/762737273590382623/796026186273914920/134987688_234910378039949_7851398929522376211_n1.png" width="60px" />
+                    <Link to='/' className={classes.logo}>
+                        <img alt="logo" src="https://media.discordapp.net/attachments/762737273590382623/798269889063550976/1.png" width="75px" />
+                        <h1 className={classes.logoText}>Assirk Assaghir</h1>
                     </Link>
                 </Typography>
                 <AppBarCollapse />

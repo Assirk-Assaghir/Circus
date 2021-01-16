@@ -11,7 +11,11 @@ const styles = theme => ({
     },
     link: {
         textDecoration: 'none',
-        color: 'white'
+        // color: 'white'
+    },
+    button: {
+        color: "#aa1d23",
+        fontWeight: 'bold',
     },
     buttonBar: {
         [theme.breakpoints.down("xs")]: {
@@ -33,7 +37,6 @@ const AppBarCollapse = props => {
 
     const NavItems =
         [
-
             { title: "Gallery", path: "/gallery" },
             { title: "Programs", path: "/Programs" },
             { title: "About Us", path: "/AboutUs" },
@@ -44,7 +47,7 @@ const AppBarCollapse = props => {
             <ButtonAppBarCollapse>
                 {NavItems.map((item, i) => (
                     <Link to={item.path} key={item.title} className={props.classes.link}>
-                        <MenuItem>
+                        <MenuItem style={{ color: "black" }}>
                             {item.title}
                         </MenuItem>
                     </Link>
@@ -54,7 +57,7 @@ const AppBarCollapse = props => {
                 {
                     NavItems.map((item, i) => (
                         <Link to={item.path} key={item.title} className={props.classes.link}>
-                            <Button color="inherit">
+                            <Button size="large" className={props.classes.button}>
                                 {item.title}
                             </Button>
                         </Link>

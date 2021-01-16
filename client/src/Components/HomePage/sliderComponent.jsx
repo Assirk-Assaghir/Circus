@@ -16,7 +16,7 @@ export default function SliderComponent() {
             .then(response => response.json())
             .then(events => setImgs(events))
     }
-    console.log('a', imgs)
+    // console.log('a', imgs)
 
     return (
         <div>
@@ -28,12 +28,12 @@ export default function SliderComponent() {
                 // emulateTouch
                 autoPlay
                 useKeyboardArrows
-                // transitionTime={3000}
+                transitionTime={1000}
                 // axis="vertical"
-                // selectedItem={1}
+                // selectedItem={0}
                 width="75%"
             >
-                {imgs.map((img, i) => (
+                {imgs.length > 0 ? imgs.map((img, i) => (
                     <div className="slide-holder" >
                         <img
                             alt={i}
@@ -41,7 +41,7 @@ export default function SliderComponent() {
                             key={i}
                         />
                     </div>
-                ))}
+                )) : null}
             </Carousel>
         </div>
     );

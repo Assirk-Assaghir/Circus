@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, MenuItem } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import ButtonAppBarCollapse from "./ButtonAppBarCollapse";
 import { Link } from "react-router-dom";
@@ -11,7 +11,6 @@ const styles = theme => ({
     },
     link: {
         textDecoration: 'none',
-        // color: 'white'
     },
     button: {
         color: "#aa1d23",
@@ -44,15 +43,7 @@ const AppBarCollapse = props => {
         ]
     return (
         <div className={props.classes.root}>
-            <ButtonAppBarCollapse>
-                {NavItems.map((item, i) => (
-                    <Link to={item.path} key={item.title} className={props.classes.link}>
-                        <MenuItem style={{ color: "black" }}>
-                            {item.title}
-                        </MenuItem>
-                    </Link>
-                ))}
-            </ButtonAppBarCollapse>
+            <ButtonAppBarCollapse NavItems={NavItems} />
             <div className={props.classes.buttonBar} id="appbar-collapse">
                 {
                     NavItems.map((item, i) => (

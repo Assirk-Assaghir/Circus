@@ -16,7 +16,7 @@ const AboutUs = () => {
         fetch(path, options)
             .then((data) => data.json())
             .then((data) => {
-                console.log(data)
+                // console.log(data)
                 setAbout(data)
             })
     }, [])

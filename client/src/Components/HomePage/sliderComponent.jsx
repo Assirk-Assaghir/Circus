@@ -27,14 +27,16 @@ export default function SliderComponent() {
                 infiniteLoop
                 // emulateTouch
                 autoPlay
+                interval={3500}
+                stopOnHover={false}
                 useKeyboardArrows
-                transitionTime={1000}
+                transitionTime={1500}
                 // axis="vertical"
                 // selectedItem={0}
                 width="75%"
             >
                 {imgs.length > 0 ? imgs.map((img, i) => (
-                    <div className="slide-holder" >
+                    <div className="slide-holder" key={i} >
                         <img
                             alt={i}
                             src={img.imgURL}

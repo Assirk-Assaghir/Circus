@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'event',
     'carouselImage',
     'gallary',
+    'program',
 ]
 
 

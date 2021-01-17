@@ -22,4 +22,5 @@ urlpatterns = [
     path('events/', include('event.urls')),
     path("carouselImage/", include("carouselImage.urls")),
     path("aboutUs/", include("AboutUs.urls")),
+    path("programs/", include("program.urls")),
 ]

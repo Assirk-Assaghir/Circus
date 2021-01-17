@@ -1,6 +1,6 @@
 import React from "react"
 import "./galleryItem.css"
-import {withRouter} from "react-router-dom"
+import { withRouter } from "react-router-dom"
 const array = [
     "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     "https://images.pexels.com/photos/38867/pexels-photo-38867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
@@ -15,7 +15,7 @@ const array = [
     "https://images.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 ]
 
-const GalleryItem = ({match}) => {
+const GalleryItem = ({ match }) => {
     let arrayOne = array.slice(0, Math.floor(array.length / 3) + 1)
     let arrayTwo = array.slice(Math.floor(array.length / 3), 2 * Math.floor(array.length / 3) + 1)
     let arrayThree = array.slice(2 * Math.floor(array.length / 3))
@@ -24,9 +24,9 @@ const GalleryItem = ({match}) => {
         <div className="row">
             <div className="column">
                 {
-                    arrayOne.map(image => {
+                    arrayOne.map((image, i) => {
                         return (
-                            <img src={image} alt="" />
+                            <img src={image} key={i} alt="" />
                         )
                     })
                 }
@@ -34,18 +34,18 @@ const GalleryItem = ({match}) => {
 
             <div className="column">
                 {
-                    arrayTwo.map(image => {
+                    arrayTwo.map((image, i) => {
                         return (
-                            <img src={image} alt="" />
+                            <img src={image} key={i} alt="" />
                         )
                     })
                 }
             </div>
             <div className="column">
                 {
-                    arrayThree.map(image => {
+                    arrayThree.map((image, i) => {
                         return (
-                            <img src={image} alt="" />
+                            <img src={image} key={i} alt="" />
                         )
                     })
                 }

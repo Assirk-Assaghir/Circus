@@ -3,87 +3,88 @@
     justify-content: center;
 }
 
-.container {
+.pro-container {
     width: 90%;
     padding: 0% 2.5%;
-    background-color: #fff;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.container h1 {
+.pro-container h1 {
     font-size: 50px
 }
 
-.about {
+.program {
+    margin-top: 20px;
     padding: 1% 0;
     width: 100%;
     height: auto;
+    background-color: #fff;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
-.about .left {
+.program .left {
     padding: 2% 0;
     float: left;
     width: 50%;
     /* display: inline-block; */
 }
 
-.about .right {
+.program .right {
     width: 50%;
     display: inline-block;
 }
 
-.image {
+.logo {
     margin-top: 5%;
-    max-width: 650px;
+    max-width: 300px;
 }
 
-.about .right img {
+.program .right img {
     width: 100%;
     border-radius: 15px;
 }
 
-.about .left h1 {
+.program .left h1 {
     text-align: center;
     color: #aa1d23;
     margin: 0 0 10px 0;
 }
 
-.about .left hr {
+.program .left hr {
     width: 20%;
     border-top: 2px solid #000;
     border-bottom: none;
 }
 
-.about .left p {
+.program .left p {
     font-size: 1rem;
     margin: 40px auto;
     width: 80%
 }
 
-.about .right {
+.program .right {
     padding: 2% 0;
     width: 50%;
     display: inline-block;
 }
 
-.about .left img {
+.program .left img {
     width: 100%;
     border-radius: 15px;
 }
 
-.about .right h1 {
+.program .right h1 {
     text-align: center;
     color: #aa1d23;
     margin: 0 0 20px 0;
 }
 
-.about .right hr {
+.program .right hr {
     width: 35%;
     border-top: 2px solid #000;
     border-bottom: none;
 }
 
-.about .right p {
+.program .right p {
     font-size: 1rem;
     margin: 40px auto;
     width: 80%
@@ -96,21 +97,21 @@
 /* media */
 
 @media(max-width:1200px) {
-    .about .right p {
+    .program .right p {
         font-size: .8rem;
         margin: 20px auto;
     }
-    .about .left p {
+    .program .left p {
         font-size: .8rem;
         margin: 20px auto;
     }
 }
 
 @media(max-width:992px) {
-    .about .left {
+    .program .left {
         width: 100%;
     }
-    .about .right {
+    .program .right {
         width: 100%;
     }
 }

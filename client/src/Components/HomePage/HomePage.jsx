@@ -1,12 +1,14 @@
 import React from 'react'
-import Events from './Events'
+import SliderImg from './sliderImg'
+import Banner from './Banner'
 
-import './styles.css'
+// import './styles.css'
 
 const HomePage = () => {
     return (
         <div className='home'>
-            <Events />
+            <SliderImg />
+            <Banner />
 
         </div>
     )

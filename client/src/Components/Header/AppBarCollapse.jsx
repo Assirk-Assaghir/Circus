@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, MenuItem } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import ButtonAppBarCollapse from "./ButtonAppBarCollapse";
 import { Link } from "react-router-dom";
@@ -11,7 +11,10 @@ const styles = theme => ({
     },
     link: {
         textDecoration: 'none',
-        color: 'black'
+    },
+    button: {
+        color: "#aa1d23",
+        fontWeight: 'bold',
     },
     buttonBar: {
         [theme.breakpoints.down("xs")]: {
@@ -33,27 +36,19 @@ const AppBarCollapse = props => {
 
     const NavItems =
         [
-            { title: "Gallary", path: "/Gallary" },
+            { title: "Gallery", path: "/gallery" },
             { title: "Programs", path: "/Programs" },
-            { title: "AboutUs", path: "/AboutUs" },
-            { title: "ContuctUs", path: "/ContuctUs" },
+            { title: "About Us", path: "/AboutUs" },
+            { title: "Contact Us", path: "/ContactUs" },
         ]
     return (
         <div className={props.classes.root}>
-            <ButtonAppBarCollapse>
-                {NavItems.map((item, i) => (
-                    <Link to={item.path} key={item.title} className={props.classes.link}>
-                        <MenuItem>
-                            {item.title}
-                        </MenuItem>
-                    </Link>
-                ))}
-            </ButtonAppBarCollapse>
+            <ButtonAppBarCollapse NavItems={NavItems} />
             <div className={props.classes.buttonBar} id="appbar-collapse">
                 {
                     NavItems.map((item, i) => (
                         <Link to={item.path} key={item.title} className={props.classes.link}>
-                            <Button color="inherit">
+                            <Button size="large" className={props.classes.button}>
                                 {item.title}
                             </Button>
                         </Link>

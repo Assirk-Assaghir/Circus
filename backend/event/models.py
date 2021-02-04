@@ -16,3 +16,12 @@ class Event(models.Model):
 
     class Meta:
         ordering = ['-title']
+
+
+class EventImage(models.Model):
+    EventId = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='images')
+    image = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return self.EventId.title
+

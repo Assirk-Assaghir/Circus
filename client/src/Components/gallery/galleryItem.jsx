@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import "./galleryItem.css"
-
+import { withRouter } from "react-router-dom"
 const array = [
     "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     "https://images.pexels.com/photos/38867/pexels-photo-38867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
@@ -15,17 +15,36 @@ const array = [
     "https://images.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 ]
 
-const GalleryItem = () => {
-    let arrayOne = array.slice(0, Math.floor(array.length / 3) + 1)
-    let arrayTwo = array.slice(Math.floor(array.length / 3), 2 * Math.floor(array.length / 3) + 1)
-    let arrayThree = array.slice(2 * Math.floor(array.length / 3))
+const GalleryItem = ({ match }) => {
+    const [images, setImages] = useState([])
+    console.log(images)
+    useEffect(() => {
+        getImages()
+    }, [])
+
+    const getImages = () => {
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: match.params.id })
+        };
+        fetch('http://127.0.0.1:8000/gallery/details', requestOptions)
+            .then(response => response.json())
+            .then(data => setImages(data.images));
+    }
+
+
+    let arrayOne = images && images.slice(0, Math.floor(images.length / 3))
+    let arrayTwo = images && images.slice(Math.floor(images.length / 3), 2 * Math.floor(images.length / 3))
+    let arrayThree = images && images.slice(2 * Math.floor(images.length / 3))
+    console.log(1, arrayThree)
     return (
-        <div className="row">
+        <div className="row" style={{ marginTop: '100px' }}>
             <div className="column">
                 {
-                    arrayOne.map(image => {
+                    images.length >= 3 && arrayOne.map((image, i) => {
                         return (
-                            <img src={image} alt="" />
+                            <img src={image.image} key={i} alt={image.title} />
                         )
                     })
                 }
@@ -33,18 +52,18 @@ const GalleryItem = () => {
 
             <div className="column">
                 {
-                    arrayTwo.map(image => {
+                    images.length >= 2 && arrayTwo.map((image, i) => {
                         return (
-                            <img src={image} alt="" />
+                            <img src={image.image} key={i} alt={image.title} />
                         )
                     })
                 }
             </div>
             <div className="column">
                 {
-                    arrayThree.map(image => {
+                    images.length >= 1 && arrayThree.map((image, i) => {
                         return (
-                            <img src={image} alt="" />
+                            <img src={image.image} key={i} alt={image.title} />
                         )
                     })
                 }
@@ -53,4 +72,4 @@ const GalleryItem = () => {
 
     )
 }
-export default GalleryItem
+export default withRouter(GalleryItem)

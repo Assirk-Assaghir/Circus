@@ -71,8 +71,36 @@
     height: 100%;
     width: 33%;
     padding: 40px;
-    border-left: 1px white solid;
-    border-right: 1px white solid;
+    padding-top: 0;
+    border-left: 1px rgba(217,217,217,0.4) solid;
+    border-right: 1px rgba(217,217,217,0.4) solid;
+    text-align: start;
 
+}
+
+h2{
+   font-family:'Roboto';
+   line-height: 1.45;
+   font-weight: 600;
+}
+
+.events p{
+    color: white;
+    font-family:'Roboto';
+    line-height: 1.45;
+    font-weight: 600;
+}
+
+.events a{
+    width: 100%;
+}
+
+.events p:hover{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.event__date{
+   color: rgba(238, 235, 235, 0.4)
 }
 

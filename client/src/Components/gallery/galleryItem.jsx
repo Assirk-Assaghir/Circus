@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import "./galleryItem.css"
 import { withRouter } from "react-router-dom"
 const array = [
@@ -16,17 +16,35 @@ const array = [
 ]
 
 const GalleryItem = ({ match }) => {
-    let arrayOne = array.slice(0, Math.floor(array.length / 3) + 1)
-    let arrayTwo = array.slice(Math.floor(array.length / 3), 2 * Math.floor(array.length / 3) + 1)
-    let arrayThree = array.slice(2 * Math.floor(array.length / 3))
-    console.log(match.params.id)
+    const [images, setImages] = useState([])
+    console.log(images)
+    useEffect(() => {
+        getImages()
+    }, [])
+
+    const getImages = () => {
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: match.params.id })
+        };
+        fetch('http://127.0.0.1:8000/gallery/details', requestOptions)
+            .then(response => response.json())
+            .then(data => setImages(data.images));
+    }
+
+
+    let arrayOne = images && images.slice(0, Math.floor(images.length / 3))
+    let arrayTwo = images && images.slice(Math.floor(images.length / 3), 2 * Math.floor(images.length / 3))
+    let arrayThree = images && images.slice(2 * Math.floor(images.length / 3))
+    console.log(1, arrayThree)
     return (
-        <div className="row">
+        <div className="row" style={{ marginTop: '100px' }}>
             <div className="column">
                 {
-                    arrayOne.map((image, i) => {
+                    images.length >= 3 && arrayOne.map((image, i) => {
                         return (
-                            <img src={image} key={i} alt="" />
+                            <img src={image.image} key={i} alt={image.title} />
                         )
                     })
                 }
@@ -34,18 +52,18 @@ const GalleryItem = ({ match }) => {
 
             <div className="column">
                 {
-                    arrayTwo.map((image, i) => {
+                    images.length >= 2 && arrayTwo.map((image, i) => {
                         return (
-                            <img src={image} key={i} alt="" />
+                            <img src={image.image} key={i} alt={image.title} />
                         )
                     })
                 }
             </div>
             <div className="column">
                 {
-                    arrayThree.map((image, i) => {
+                    images.length >= 1 && arrayThree.map((image, i) => {
                         return (
-                            <img src={image} key={i} alt="" />
+                            <img src={image.image} key={i} alt={image.title} />
                         )
                     })
                 }

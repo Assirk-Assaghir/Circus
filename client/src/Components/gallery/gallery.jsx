@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import "./gallery.css"
+import GallerItem from './galleryItem'
 import { Link } from "react-router-dom"
 
 const results = [
@@ -30,17 +31,29 @@ const results = [
     }
 ]
 const Gallery = () => {
+    const [galleries, setGalleries] = useState([])
+    console.log(galleries)
+
+    useEffect(() => {
+        getGallaries()
+    }, [])
+
+    const getGallaries = () => {
+        fetch('http://127.0.0.1:8000/gallery/')
+            .then(response => response.json())
+            .then(events => setGalleries(events))
+    }
 
     return (
         <main className="page-content" style={{ marginTop: '100px' }}>
             {
-                results.map((result, i) => {
+                galleries && galleries.map((gal, i) => {
                     return (
-                        <div className="card" key={i} style={{ backgroundImage: `url(${result.image})` }}>
+                        <div className="card" key={i} style={{ backgroundImage: `url(${gal.image})` }}>
                             <div className="content">
-                                <h2 className="title">{result.title}</h2>
-                                <p className="description">{result.description}</p>
-                                <Link to={`gallery/${result.title}`}>
+                                <h2 className="title">{gal.title}</h2>
+                                <p className="description">{gal.description}</p>
+                                <Link to={`gallery/${gal.id}`}>
                                     <button className="btn">View Trips</button>
                                 </Link>
                             </div>
@@ -48,6 +61,8 @@ const Gallery = () => {
                     )
                 })
             }
+
+
         </main>
     )
 }

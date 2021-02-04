@@ -21,13 +21,13 @@ const Programs = () => {
     }, [])
 
     return (
-        <div className="main">
+        <div className="main" style={{ marginTop: '100px' }}>
             <div className="pro-container">
                 {programs.map((program, i) => (
                     <div key={i} className="program">
                         <div className={i % 2 !== 0 ? "left" : "right"}>
                             <h1>{program.title}</h1>
-                            <p>{program.description}</p>
+                            <p style={{ textAlign: 'justify', textJustify: 'inter-word' }}>{program.description}</p>
                         </div>
                         <div className={i % 2 === 0 ? "left" : "right"}>
                             <img alt={program.alt} src={program.img} className='logo' />

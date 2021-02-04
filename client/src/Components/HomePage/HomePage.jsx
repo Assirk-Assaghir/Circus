@@ -1,6 +1,6 @@
 import React from 'react'
-import Events from './Events'
 import SliderImg from './sliderImg'
+import Banner from './Banner'
 
 // import './styles.css'
 
@@ -8,7 +8,7 @@ const HomePage = () => {
     return (
         <div className='home'>
             <SliderImg />
-            {/* <Events /> */}
+            <Banner />
 
         </div>
     )

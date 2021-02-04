@@ -3,7 +3,7 @@ import ButtonAppBar from './ResponsiveDrawer'
 
 const Header = () => {
     return (
-        <div style={{ marginBottom: '100px' }}>
+        <div style={{ marginBottom: '50px' }}>
             <ButtonAppBar />
         </div>
     )

@@ -27,22 +27,16 @@ export default function SliderComponent() {
                 infiniteLoop
                 // emulateTouch
                 autoPlay
-                interval={3500}
-                stopOnHover={false}
+                interval={5500}
+                stopOnHover={true}
                 useKeyboardArrows
                 transitionTime={1500}
-                // axis="vertical"
-                // selectedItem={0}
-                width="75%"
+            // axis="vertical"
+            // selectedItem={0}
+            // width="75%"
             >
                 {imgs.length > 0 ? imgs.map((img, i) => (
-                    <div className="slide-holder" key={i} >
-                        <img
-                            alt={i}
-                            src={img.imgURL}
-                            key={i}
-                        />
-                    </div>
+                    <div className='caro' key={i} style={{ backgroundImage: `url(${img.imgURL})` }}></div>
                 )) : null}
             </Carousel>
         </div>

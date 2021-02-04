@@ -32,7 +32,7 @@ const results = [
 const Gallery = () => {
 
     return (
-        <main className="page-content">
+        <main className="page-content" style={{ marginTop: '100px' }}>
             {
                 results.map((result, i) => {
                     return (
